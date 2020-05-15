@@ -1,0 +1,11 @@
+#! /bin/bash
+
+#	cdns -- start up coredns in Docker 
+#		Default is to use the Corefile for conf.  But any args are passed
+#		along so this can be overridden.
+#
+#		It is expected that the Corefile plus dns mapping files (plus anything else!) are
+#		provided in a volume that is also the working directory for coredns when it is
+#		launched.  Here, a "bind mount" is used.  Other volumes would also work.
+
+docker run -d --restart=always -p 53:53 -p 53:53/udp -v $(pwd):/coredns.d -w /coredns.d ranger6/coredns:1.6.9 "$@"

@@ -42,7 +42,7 @@ This project only addresses compiling from source and then building an image.  I
 
 ## running the name server
 
-TBD
+Examples of using the coredns image are found in the `examples` directory.
 
 ## publishing the Docker image
 

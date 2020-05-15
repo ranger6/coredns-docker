@@ -1,0 +1,21 @@
+; localhost reverse mapping remulac.fr
+
+$TTL	1h
+
+0.0.127.in-addr.arpa.	IN	SOA	muir.remulac.fr.	ranger6rob.gamil.com. (
+					2018092501	; Serial
+					3h		; refresh
+					1h		; retry
+					1w		; expire
+					1h		; negative TTL
+					)
+;
+; name servers
+;
+0.0.127.in-addr.arpa.	IN	NS	muir.remulac.fr.
+
+;
+; canonical mapping
+;
+1.0.0.127.in-addr.arpa.	IN	PTR	localhost.
+
