@@ -25,6 +25,12 @@ The usual clone of this repo will not pull a copy of coredns.  You can do this i
 % git clone --recurse-submodules https://github.com/ranger6/coredns-docker.git
 ```
 
+To pull down upstream changes:
+
+```
+% git pull --recurse-submodules
+```
+
 See the [git submodule documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for details. 
 
 ## building the image
@@ -35,6 +41,8 @@ build is trivial:
 ```
 % make
 ```
+
+See the `Makefile` for a few more details.
 
 ## what else?
 

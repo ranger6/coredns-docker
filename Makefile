@@ -11,12 +11,15 @@ TIMESTAMP := $(shell date -u +%Y%m%d%H%M%S)
 TAG := snapshot
 include VERSION
 
-.PHONY: coredns snapshot checkout compile build
+.PHONY: coredns snapshot update checkout compile build
 
 coredns: TAG := $(DOCKER_IMAGE_TAG)
 coredns: checkout compile build
 
 snapshot: compile build
+
+update:
+	git pull --recurse-submodules
 
 checkout:
 	cd coredns && git checkout $(COREDNS_VERSION)
